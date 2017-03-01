@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    tools:context="android.example.com.courtcounter.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/teamA"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="0"
+                android:textSize="36sp" />
+
+            <TableLayout
+                android:shrinkColumns="1,4"
+                android:stretchColumns="*"
+                android:id="@+id/detailsA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="@string/threePointShots"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_triples"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        android:padding="4dp"
+                        android:text="@string/twoPointShots"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_doubles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+                </TableRow>
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:padding="4dp"
+                        android:text="@string/freeThrows"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_singles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_column="0"
+                        android:padding="4dp"
+                        android:text="@string/fouls"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_fouls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                    <TableRow>
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:onClick="addScore"
+                            android:tag="TeamA,3"
+                            android:text="@string/add3" />
+
+                        <Button
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:onClick="addScore"
+                            android:tag="TeamA,2"
+                            android:text="@string/add2" />
+                    </TableRow>
+
+                    <TableRow>
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addScore"
+                        android:tag="TeamA,1"
+                        android:text="Free throw" />
+
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addFoul"
+                        android:tag="TeamA"
+                        android:text="@string/addFoul" />
+                </TableRow>
+
+            </TableLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/teamB" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="0"
+                android:textSize="36sp" />
+
+
+            <TableLayout
+                android:shrinkColumns="1,4"
+                android:stretchColumns="*"
+                android:id="@+id/detailsB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="@string/threePointShots"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_triples"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="4dp"
+                        android:textSize="16sp"
+                        android:text="0"
+                        />
+
+                    <TextView
+                        android:padding="4dp"
+                        android:text="@string/twoPointShots"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_doubles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+                </TableRow>
+
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="0"
+                        android:padding="4dp"
+                        android:text="@string/freeThrows"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_singles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_column="0"
+                        android:padding="4dp"
+                        android:text="@string/fouls"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_fouls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:text="0"
+                        android:textSize="16sp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addScore"
+                        android:tag="TeamB,3"
+                        android:text="@string/add3" />
+
+                    <Button
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addScore"
+                        android:tag="TeamB,2"
+                        android:text="@string/add2" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addScore"
+                        android:tag="TeamB,1"
+                        android:text="Free throw" />
+
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:onClick="addFoul"
+                        android:tag="TeamB"
+                        android:text="@string/addFoul" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="reset"
+        android:text="@string/reset" />
+
+
+</LinearLayout>

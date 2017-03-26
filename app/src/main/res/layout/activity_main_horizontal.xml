@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EEEEEE"
     android:orientation="vertical"
-    android:paddingTop="4dp"
+    android:paddingTop="@dimen/textview_padding"
     tools:context="android.example.com.courtcounter.MainActivity">
 
     <LinearLayout
@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="@dimen/textview_padding"
                 android:text="@string/teamA"
                 android:id="@+id/textView2" />
 
@@ -36,9 +36,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="@dimen/textview_padding"
                 android:text="0"
-                android:textSize="36sp" />
+                android:textSize="@dimen/text_size_score" />
 
             <TableLayout
                 android:shrinkColumns="1,4"
@@ -51,33 +51,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/threePointShots"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_a_triples"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:padding="4dp"
-                        android:textSize="16sp"
+                        android:padding="@dimen/textview_padding"
+                        android:textSize="@dimen/table_text_size"
                         android:text="0"
                         />
 
                     <TextView
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/twoPointShots"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_a_doubles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
                 </TableRow>
 
 
@@ -85,33 +85,33 @@
                 <TableRow>
                     <TextView
                         android:layout_column="0"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/freeThrows"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_a_singles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:layout_column="0"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/fouls"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_a_fouls"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
                 </TableRow>
 
             </TableLayout>
@@ -124,7 +124,7 @@
                     <TableRow>
                         <Button
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="@dimen/row_margin"
                             android:onClick="addScore"
                             android:tag="TeamA,3"
                             android:text="@string/add3" />
@@ -132,7 +132,7 @@
                         <Button
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="@dimen/row_margin"
                             android:onClick="addScore"
                             android:tag="TeamA,2"
                             android:text="@string/add2" />
@@ -141,14 +141,14 @@
                     <TableRow>
                     <Button
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addScore"
                         android:tag="TeamA,1"
                         android:text="Free throw" />
 
                     <Button
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addFoul"
                         android:tag="TeamA"
                         android:text="@string/addFoul" />
@@ -178,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="@dimen/textview_padding"
                 android:text="@string/teamB" />
 
             <TextView
@@ -186,9 +186,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="@dimen/textview_padding"
                 android:text="0"
-                android:textSize="36sp" />
+                android:textSize="@dimen/text_size_score" />
 
 
             <TableLayout
@@ -202,33 +202,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/threePointShots"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_b_triples"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:padding="4dp"
-                        android:textSize="16sp"
+                        android:padding="@dimen/textview_padding"
+                        android:textSize="@dimen/table_text_size"
                         android:text="0"
                         />
 
                     <TextView
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/twoPointShots"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_b_doubles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
                 </TableRow>
 
 
@@ -236,33 +236,33 @@
                 <TableRow>
                     <TextView
                         android:layout_column="0"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/freeThrows"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_b_singles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:layout_column="0"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="@string/fouls"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
 
                     <TextView
                         android:id="@+id/team_b_fouls"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:padding="4dp"
+                        android:padding="@dimen/textview_padding"
                         android:text="0"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/table_text_size" />
                 </TableRow>
 
             </TableLayout>
@@ -275,7 +275,7 @@
                 <TableRow>
                     <Button
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addScore"
                         android:tag="TeamB,3"
                         android:text="@string/add3" />
@@ -283,7 +283,7 @@
                     <Button
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addScore"
                         android:tag="TeamB,2"
                         android:text="@string/add2" />
@@ -291,14 +291,14 @@
                 <TableRow>
                     <Button
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addScore"
                         android:tag="TeamB,1"
                         android:text="Free throw" />
 
                     <Button
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
+                        android:layout_margin="@dimen/row_margin"
                         android:onClick="addFoul"
                         android:tag="TeamB"
                         android:text="@string/addFoul" />

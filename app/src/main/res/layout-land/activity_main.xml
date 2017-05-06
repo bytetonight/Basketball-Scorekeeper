@@ -25,24 +25,22 @@
 
             <TableLayout
                 android:id="@+id/detailsA"
-                style="@style/tableScore">
+                style="@style/tableScoreL">
 
                 <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/threePointShots"/>
 
                     <TextView
                         android:id="@+id/team_a_triples"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
-                </TableRow>
 
-                <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/twoPointShots"/>
 
                     <TextView
@@ -54,53 +52,62 @@
                 <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/freeThrows"/>
 
                     <TextView
                         android:id="@+id/team_a_singles"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
-                </TableRow>
 
-                <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/fouls"/>
 
                     <TextView
                         android:id="@+id/team_a_fouls"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
                 </TableRow>
 
             </TableLayout>
 
+            <TableLayout
+                style="@style/tableButtonsLand">
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamA,3"
-                android:text="@string/add3"/>
+                <TableRow>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamA,2"
-                android:text="@string/add2"/>
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamA,3"
+                        android:text="@string/add3"/>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamA,1"
-                android:text="@string/addFree"/>
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamA,2"
+                        android:text="@string/add2"/>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addFoul"
-                android:tag="TeamA"
-                android:text="@string/addFoul"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamA,1"
+                        android:text="@string/addFree"/>
+
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addFoul"
+                        android:tag="TeamA"
+                        android:text="@string/addFoul"/>
+                </TableRow>
+
+            </TableLayout>
         </LinearLayout>
 
         <View
@@ -120,30 +127,28 @@
 
             <TableLayout
                 android:id="@+id/detailsB"
-                style="@style/tableScore">
+                style="@style/tableScoreL">
 
                 <TableRow>
 
                     <TextView
                         android:id="@+id/textView"
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/threePointShots"/>
 
                     <TextView
                         android:id="@+id/team_b_triples"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
-                </TableRow>
 
-                <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/twoPointShots"/>
 
                     <TextView
                         android:id="@+id/team_b_doubles"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
                 </TableRow>
 
@@ -151,53 +156,65 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/freeThrows"/>
 
                     <TextView
                         android:id="@+id/team_b_singles"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
-                </TableRow>
 
-                <TableRow>
 
                     <TextView
-                        style="@style/cell_label"
+                        style="@style/cell_label_land"
                         android:text="@string/fouls"/>
 
                     <TextView
                         android:id="@+id/team_b_fouls"
-                        style="@style/cell_value"
+                        style="@style/cell_value_land"
                         tools:text="0"/>
                 </TableRow>
 
             </TableLayout>
 
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamB,3"
-                android:text="@string/add3"/>
+                <TableRow>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamB,2"
-                android:text="@string/add2"/>
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamB,3"
+                        android:text="@string/add3"/>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addScore"
-                android:tag="TeamB,1"
-                android:text="@string/addFree"/>
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamB,2"
+                        android:text="@string/add2"/>
 
-            <Button
-                style="@style/score_button"
-                android:onClick="addFoul"
-                android:tag="TeamB"
-                android:text="@string/addFoul"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addScore"
+                        android:tag="TeamB,1"
+                        android:text="@string/addFree"/>
+
+                    <Button
+                        style="@style/score_button"
+                        android:onClick="addFoul"
+                        android:tag="TeamB"
+                        android:text="@string/addFoul"/>
+
+                </TableRow>
+
+            </TableLayout>
         </LinearLayout>
 
 
